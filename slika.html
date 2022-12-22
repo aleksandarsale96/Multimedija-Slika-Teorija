@@ -1,0 +1,128 @@
+<!-- 1. Kako nastaje vizuelna predstava o slikama i u kom obliku ona treba da se nalazi da bi se obradjivala na racunaru -->
+    U racunarima i drugim digitalnim uredjajima slika ima tacno utvrdjenu strukturu zapisa i predstavlja se pikselima. 
+    Pikseli su najmanji element slike.
+
+
+<!--3. Sta je rezolucija slike i u kojim jedinicama se izrazava  -->
+    Rezolucija je mera preciznosti predstavljanja slike. Moze se definisati na 2 nacina:
+
+        -Relatina:
+            Broj px po jedinici duzine(obicno je jedinica duzine inch)
+        -Apsolutna:
+            Ukupan broj px posmatrane slike
+
+    Izrazava se u jedinicama broja piksela po inchu (ppi), ili broj tacaka po inchu (dpi)
+    -ppi => za prikaz na monitorima
+    -dpi => za stampu
+    Uobicajne rezolucije slika za prikaz na monitoru su 72 do 150ppi
+    a za stampu od 100 - 600dpi
+    
+    
+<!--4. Dinamicki raspon slike  -->
+    Odredjuje preciznost predstavljanja pojedinacnih piksela.
+    Izrazava se brojem razlicitih nijansi boja kojima je predstavljen jedan pixel.
+    Dinacki raspon monohromatskog (crno-belog) piksela meri se brojem nijansi sive boje, a dinacmicki raspon piksela u boji
+    meri se brojem svake boje pojedinacno.
+
+<!-- 5. Iz kojih delova se sastoji digitalni zapis slike, 6. 2 osnovna oblika digitalnog zapisa slike -->
+    -Zaglavlje - podaci koji opisuju sirinu, visinu, dinamicki raspon i detalje zapisa slike,
+    -Sadrzaj slike
+
+    Osnovni oblici digitalnog zapisa slike su:
+        -vektroska grafika
+        -rasterska grafika, koja po izgledu podseca na fotografiju
+
+<!--7. Sta je vektorska grafika i gde se koristi  -->
+    Vektor (vektorska linija) kao pojam u grafici oznacava odsecak koji ima svoju duzinu i smer.
+    Vektorska grafika oznacava nacin crtanja pomocu tih vektorskih linija.
+    Svaka linija sadrzi tri podatka:
+        - duzinu,
+        - smer ,
+        - boju linije.
+    Vektorske linije se koriste za kreiranje vektorskog objekta.    
+
+<!--8.Sta je rasterska grafika i gde se koristi -->
+    Rasterska grafika je crtanje pomocu matrice tacaka-piskela, pri cemu svaki px nosi informaciju o boji.
+
+
+<!--9. Poredjenje rasterske i vektorske grafike  -->
+    U odnosu na vektorsku grafiku, rasterska ima niz nedostataka. Velicina slike i njen kvalitet zavise od broja px koji je cine.
+    Povecanje rasterske slike postize se uvecanjem postojecih px ili dodavanjem novih, a smanjivanje slike umanjivanjem ili oduzimanjem px.
+    Tako se dobija veca ili manja slika ali sa izrazenim opadanjem njenog kvaliteta.
+    Slike napravljenje rasterskom grafikom zauzimaju mnogo vise memorijskog prostora.
+    Prednost rasterske grafike u odnosu na vektorsku je prikazivanje realisticnih slika i slozenih crteza sa finim detaljima.
+
+<!--11,12,13. Osnovni modeli za prikazivanje boja  -->
+    -RGB (Aditivni model) => 3 boje, RED GREEN BLUE, sve ostale boje se dobijaju mesanjem, kombinacija svih osnovnih boja u istom odnosu daju belu, a odsustvo svih
+    komponenti daju crnu. Koristi se za predstavljanje slika na monitoru,TV ekranima, projektorima itd..
+
+    -CMYK (Suptraktivni model) => 4 boje, plavo-zelena, purpurna, zuta i crna
+    Suptraktivni model nastaje oduzimanjem boja. Koristi se kada se boja nanosi na neku podlogu (stampa, slikanje), takodje postoji HSB model, HSV model i HSL model.
+    
+
+<!--14. Racunarske boje -->
+    Racunarsko mesanje boja naziva se INTERPOLACIJA.
+    Kkod RGB modela se koristi 24-bitni binarni zapis,svaka boja ima 8bit-a, kod predstavljanja na webu hex,
+    16znakova-brojeva od 0 do 9 i od A do F.
+
+<!--15. Izvori digitalnih slika  -->
+    * Crtanje u nekom od razlicitih racunarskih programa: 
+        -Digitalni crtezi => koriste se programi za izradu slika u vektorskoj ili bitmapiranoj grafici. Crtezi se kreiraju koriscenjem osnovnih objekata (linija, kvadrata, elipse..).
+    * Slikanje ekrana,
+    * Preuzimanje sa weba,
+    * Skeniranje:
+        - Pretvaraju tekstove, slike, grafike i druge stampane forme u digitalni zapis, novi oblik pamte kao rastersku sliku, koja se posebnim programima obradjuje ili    
+        prebacuje u drugi oblik.
+    * Fotografisanje,
+    * Kreiranje slika u programu za obradu slika
+
+<!--16. Osnovni formati digitalnih slika -->
+    -BMP => Standardni format rasterske slike,
+    -TIFF => Podrzava ga PC i MAC, podrzava sve dubine boja i CMYK model,
+    -JPG => Kompresuje sliku 25puta pri cemu gubi kvalitet ali i size,
+    -GIF => 256 boja, crtezi, slike i animacije,
+    -PNG => 246 boja, vecu dubinu boja od GIF-a imajuci pri tome malu velicinu dadoteke.
+
+<!-- 17. Programi za obradu slika -->
+    Obrada slika vrsi se u programima koji se nazivaju EDITORI SLIKA.
+    Uglavnom se obrada vrsi iz 2 razloga:
+        -Uklanjanje nedostataka nastalih prilikom kreiranja slike,
+        -Kreiranje specijalnih efekata
+    Obrada slike obuhvata promenu dimenzije,geometrijske transformacije, podesavanje osvetljenja, kontrasta, boje i ostrine slike itd..    
+
+<!--18. Osnovni postupi obrade slika -->
+    -Promena dimenzije,
+    -Transformacija,
+    -Podesavanje osvetljenja, kontrasta,
+    -Dodavanje efekta
+
+<!-- 19. Cime se odlikuju slike namenjenje prikazivanju na ekranu -->
+    Pri prikazivanju slike na ekranu koristi se RGB model boja. 
+    Fizicka velicina slike zavisi od rezolucije ekrana na kome se prikazuje
+    Moze se desiti da je rezolucija slike manja od rezolucije ekrana i u tom slucaju se koristi INTERPOLACIJA (dodavanje px kako bi se povecala rezolucija slike),
+    a u slucaju da je rezolucija slike veca od rezolucije ekrana vrsi se odbacivanje suvisnih px. 
+    Treba naglasiti da px koji su odbaceni se ne mogu vise povratiti.
+
+<!--20. Priprema slike za stampu  -->
+    Priprema slika za stampu podrazumeva njenu obradu i podesavanje odredjene rezolucije (u zavisnosti od namene).
+    Pripremaju se u CMYK modelu boja.
+    Sacuvati sliku u EPS formatu.
+   
+<!--21. Priprema slike za WEB -->
+    Za atraktivnost Web sajta i zadrzavanje paznje posetilaca veoma je vazna brzina ucitavanja stranice.
+    Najvise vremena za ocitavanje sajta oduzimaju multimedijalni sadrzaji koji cine od 30 do 50% velicine Web stranice.
+    Zbog toga je potrebno u HTML kodu definisati duzinu i sirinu slike.
+    Rezolucija slike ne treba da bude veca od 72ppi.
+    Primer: 
+        -U Photoshopu otvoriti IMAGE SIZE => iskljuciti opciju RESAMPLE IMAGE cime se obezbedjuje promena fizicke velicine slike dok broj
+        pixela ostaje isti.
+        -Sl korak metoda interpolacije => Izabrati opciju koja ce zadrzati proporciju slike a zatim u polju RESOLUTION definisati novu rezoluciju 72ppi
+
+<!--22. Skeniranje  -->
+    Skeniranje je proces u kom se slika na papiru ili nekoj drugoj podlozi pretvara u digitalni oblik pogodan za obradu.
+    Uredjaji koji se pri tome koriste nazivaju se skeneri.
+    Takodje se koriste i za slanje faksa, a kombinacijom skenera sa stampacem dobija se uredjaj za fotokopiranje.
+    Postoje razlicite velicine skenera:
+        -Rucni
+        -Stoni
+        -Rotacioni 
